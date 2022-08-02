@@ -22,7 +22,7 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
     
-    - name: Push Debian inage to Docker Hub
+    - name: Push Debian image to Docker Hub
       uses: docker/build-push-action@v3
       with:
         context: .
@@ -30,7 +30,7 @@ jobs:
         push: true
         tags: jamiephonic/rtmps-hls-server:latest
         
-    - name: Push Alpine inage to Docker Hub
+    - name: Push Alpine image to Docker Hub
       uses: docker/build-push-action@v3
       with:
         context: .
